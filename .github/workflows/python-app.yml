@@ -25,6 +25,7 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        uvicorn main:app --reload
         python -m pip install --upgrade pip
         python install --no-cache-dir --upgrade -r requirements.txt
         #pip install flake8 pytest
