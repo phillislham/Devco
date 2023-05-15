@@ -28,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         python install --no-cache-dir --upgrade -r requirements.txt
         #pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip3 install -r requirements.txt;
     - name: puerto
       run: |
         uvicorn app.main:app --host 0.0.0.0 --port 8000
